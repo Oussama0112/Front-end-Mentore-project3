@@ -1,0 +1,156 @@
+
+/* set upmy variabels */
+:root{
+    --main-clr-100: hsl(225, 100%, 94%);
+    --main-clr-400:hsl(245, 75%, 52%);
+    --alt-clr-100:hsl(225, 100%, 98%);
+    --alt-clr-400:hsl(224, 23%, 55%);
+    --alt-clr-800:hsl(223, 47%, 23%);
+    --main-transition:0.4s
+}
+/* reset set-up */
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+  /*
+    2. Remove default margin
+  */
+* {
+    margin: 0;
+}
+  /*
+    3. Allow percentage-based heights in the application
+  */
+html, body {
+    height: 100%;
+}
+  /*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Red Hat Display";
+    display: grid;
+    place-items: center ;
+}
+  /*
+    6. Improve media defaults
+  */
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+  /*
+    7. Remove built-in form typography styles
+  */
+input, button, textarea, select {
+    font: inherit;
+}
+  /*
+    8. Avoid text overflows
+  */
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+p{
+    font-size: 16px;
+}
+/* my__utilities */
+.grid__box{
+    display: grid;
+    gap: 1rem;
+}
+
+.flex__box{
+    display: flex;
+    gap: 1rem;
+}
+.flex__just{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* my custom css */
+main{
+    background-color: var(--alt-clr-100);
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+article{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    overflow: hidden;
+    border-radius: 1.5rem;
+    background-color: white;
+    width: 375px;
+}
+picture img,
+picture svg{
+    width: 100%;
+}
+.content{
+    text-align: center;
+    padding-inline: 2.5rem;
+}
+.content h1{
+    font-size: 1.650rem;
+    font-weight: 800;
+    text-transform: capitalize;
+    margin-top: 1.5em;
+}
+.content > p{
+    color: var(--alt-clr-400)
+}
+.order{
+    background: var(--alt-clr-100);
+    padding: 1.225rem 1rem;
+    border-radius: 15px;
+}
+.plan_category h4{
+    text-transform: capitalize;
+}
+.plan_category span{
+    color: var(--alt-clr-400);
+}
+.change_plan a{
+    font-weight: 600;
+    transition: var(--main-transition);
+}
+.change_plan a:hover{
+    text-decoration: none;
+}
+.button{
+    border: none;
+    text-transform: capitalize;
+    padding-block: 0.825rem;
+    color: var(--alt-clr-100);
+    background: var(--main-clr-400);
+    border-radius: 15px;
+    box-shadow: 0 12px 10px var(--main-clr-100);
+    transition: var(--main-transition);
+    cursor: pointer;
+    font-weight: 700;
+}
+.button:hover{
+    background-color:hsl(245, 75%, 66%)
+}
+.cancel{
+    display: block;
+    margin-bottom: 2.5rem;
+    color: var(--alt-clr-400);
+    text-decoration: none;
+    font-weight: 700;
+    transition: var(--main-transition);
+}
+.cancel:hover{
+    color: var(--alt-clr-800);
+}
